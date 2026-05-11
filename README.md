@@ -24,22 +24,13 @@ Pontos importantes
   - `wallpaper.png` — imagem de fundo.
   - `logo.svg`, `favicon.png` — identidade visual.
   - `icones/` — ícones sociais (Google, Facebook, Twitter/X, Instagram).
-- `googe-fonts.txt` — arquivo com informações/links das fontes (typo no nome: "googe").
+- `docs/googe-fonts.txt` — arquivo com informações/links das fontes.
 
-Como abrir/desenvolver
-- Abrir `index.html` diretamente no navegador (duplo clique) para ver o layout estático.
-- Para servir via HTTP (recomendado), rode um servidor simples na raiz do projeto. Exemplo com Python 3:
+## Autor
 
-```bash
-python3 -m http.server 8000
-# depois abra http://localhost:8000 no navegador
-```
+- Iuri Code - @iuricode - Projeto do Figma
 
-Sugestões rápidas
-- Se quiser que eu adicione o import do `Roboto` (ou ajuste as fontes), posso atualizar `index.html` e `css/style.css`.
-- Posso também otimizar paths de imagens (remover a barra inicial `/` se for necessário) ou compactar imagens para melhorar carregamento.
-
-Créditos
+### Créditos
 - Fontes: Google Fonts (`Andada Pro`, `Archivo`).
 - Conteúdo e identidade visual: projeto pessoal / assets locais.
 
