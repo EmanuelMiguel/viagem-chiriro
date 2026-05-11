@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100vh;
+    background-image: url('../images/wallpaper.png');
+    background-size: cover;
+    flex-direction: column;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Andada Pro', serif;
+}
+
+p, button {
+    font-family: 'Archivo', sans-serif;
+}
+
+.header {
+    width: 60%;
+    height: 176px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links .link {
+    background-color: rgba(248, 248, 248, 0.31);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
+    transition: all ease .5s;
+}
+
+.link img {
+    width: 24px;
+    height: 24px;
+}
+
+main {
+    width: 60%;
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -150px;
+}
+
+.conteudo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.descricao {
+    flex: 1.2;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.descricao h2 {
+    font-size: 64px;
+    line-height: 70px;
+    margin-bottom: 32px;
+    width: 400px;
+}
+
+.descricao h3 {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 32px;
+}
+
+.descricao p {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.botoes {
+    width: 100%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.botao {
+    width: 240px;
+    height: 52px;
+    border: 1px solid #F1A5B1;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    font-family: 'Roboto', sans-serif;
+    transition: all ease .5s;
+}
+
+.botao-primario {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    color: #0B0A0A;
+    background-color: #F1A5B1;
+}
+
+.ilustracao {
+    flex: 1.3;
+    width: 100%;
+    height: 700px;
+    background-image: url('../images/image.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+/* Efeitos Hover */
+
+.nav-links .link:hover {
+    background-color: #F1A5B1;
+    border-color: #F1A5B1;
+}
+
+.botao-primario:hover, .botao-segundario:hover {
+    background-color: #f8f8f8;
+    color: #0B0A0A;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+/* Responsividade */
+
+@media (max-width: 1440px) {
+    body {
+        width: 100%;
+        height: 100%;
+        padding-inline: 5%;
+        margin-bottom: 20px;
+    }
+
+    main {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .conteudo {
+        flex-direction: column;
+    }
+
+    .ilustracao {
+        height: 424px;
+        order: 1;
+    }
+
+    .descricao {
+        order: 2;
+        flex: unset;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        width: 100%;
+        height: 128px;
+    }
+
+    .header .logo {
+        height: 64px;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        height: auto;
+    } 
+
+    .ilustracao {
+        height: 240px;
+        flex: unset;
+    }
+
+    .descricao h3 {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 700;
+    }
+    
+    .descricao h2 {
+        font-size: 40px;
+        line-height: 44px;
+        font-weight: 800;
+        width: 270px;
+    }
+
+    .descricao p {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+    }
+
+    .botoes {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .botao {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        justify-content: center;
+    }
+
+    .header .nav-links {
+        display: none;
+    }
+}
+
+@media (max-width: 390px) {
+    .header {
+        height: 96px;
+    }
+
+    .header .logo {
+        height: 48px;
+    }
+}
