@@ -40,6 +40,10 @@ p, button {
     gap: 24px;
 }
 
+.header .logo{
+    z-index: 10;
+}
+
 .nav-links .link {
     background-color: rgba(248, 248, 248, 0.31);
     width: 40px;
@@ -142,6 +146,10 @@ main {
     background-color: #F1A5B1;
 }
 
+.botao-segundario {
+    gap: 8px;
+}
+
 .ilustracao {
     flex: 1.3;
     width: 100%;
@@ -150,6 +158,13 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+.video {
+    border: 2px solid #F1A5B1;
+    border-radius: 5px;
+    max-width: 100%;   
 }
 
 /* Efeitos Hover */
@@ -166,12 +181,19 @@ main {
     cursor: pointer;
 }
 
+.botao-primario:hover #icon-play path {
+    fill: #F1A5B1;
+}
+
+.botao-segundario:hover #movie path {
+    fill: #0B0A0A;
+}
+
 /* Responsividade */
 
 @media (max-width: 1440px) {
     body {
         width: 100%;
-        height: 100%;
         padding-inline: 5%;
         margin-bottom: 20px;
     }
@@ -264,4 +286,12 @@ main {
     .header .logo {
         height: 48px;
     }
+}
+
+/* Animações */
+
+@keyframes flutuar {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
 }
