@@ -74,7 +74,7 @@ main {
 }
 
 .main-trailer {
-    width: 60%;
+    width: 80%;
     flex: 1;
     display: flex;
     align-items: center;
@@ -180,7 +180,8 @@ main {
 }
 
 .video-wrapper {
-    width: 60%;
+    width: 100%;
+    max-width: 854px;  
     aspect-ratio: 16 / 9;
     position: relative;
 }
@@ -275,6 +276,10 @@ footer .autor-created {
         line-height: 30px;
         font-weight: 500;
     }
+
+    .video-wrapper {
+        width: 80%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -326,7 +331,9 @@ footer .autor-created {
     }
 
     .video-wrapper {
-        width: 90%;
+        width: 95%;
+        aspect-ratio: 16 / 9;
+        position: relative;
     }
 }
 
